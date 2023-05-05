@@ -1,0 +1,55 @@
+[33mcommit 9672e50605513d4120aa85d0921f6d76cc1231d4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 6a796b8 beebe8a
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 22:37:04 2023 +0300
+
+    resolve conflict
+
+[33mcommit beebe8a4aab73131fa4916b9532cc20130808ef2[m[33m ([m[1;31morigin/featureY[m[33m, [m[1;32mfeatureY[m[33m)[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 22:33:22 2023 +0300
+
+    change in y
+
+[33mcommit 6a796b831b2ac0c1d18fe80a6fc899e975d7a9d3[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 22:28:28 2023 +0300
+
+    change in x
+
+[33mcommit 0ebbbde55fdc7919add3f4ccd019ef1a854de2c1[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 22:12:48 2023 +0300
+
+    new changes
+
+[33mcommit 88361845a662eeffd1b749336aad5f379e02001e[m
+Merge: 8613a0d 4739437
+Author: Loay Essawy <120991124+loayessawy@users.noreply.github.com>
+Date:   Fri May 5 22:00:55 2023 +0300
+
+    Merge branch 'main' into featureY
+
+[33mcommit 8613a0d7cde26b34fd7ca26df22f4edeef58f446[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 21:58:50 2023 +0300
+
+    changes
+
+[33mcommit 4739437f8f855563ead2b75a3397244b9ce4fa0e[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 21:47:30 2023 +0300
+
+    changes in branch X
+
+[33mcommit 34f80cb77fdf27debe7128ec0ed6063aa645956d[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 21:00:53 2023 +0300
+
+    Change of featureY
+
+[33mcommit 1b4948af993d47072bc7f1ecf7641fc931a2416f[m
+Author: LoayEssawy <loay.elessawy@gmail.com>
+Date:   Fri May 5 20:26:58 2023 +0300
+
+    First Commit
