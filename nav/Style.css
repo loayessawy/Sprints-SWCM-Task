@@ -1,0 +1,92 @@
+body {
+    margin: 0px;
+}
+
+.headTitle h1 {
+    color: rgb(10, 5, 98);
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 2rem;
+}
+
+.productDesc {
+
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+    border: 3px solid #5e63ef;
+}
+
+section table {
+    border: 1px solid black;
+
+}
+
+.navContainer {
+
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: gray;
+    display: flex;
+    overflow: hidden;
+
+}
+
+
+.navContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navContainer .categories {
+    position: absolute;
+    left: 50px;
+    width: 10%;
+    padding-left: 30px;
+    height: 100%;
+    background-color: rgb(247, 186, 34);
+
+}
+
+.middleLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    font-weight: bold;
+
+}
+
+.navContainer .middleLinks a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.categories .downarrow {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+
+
+}
+.emotions {
+    position: absolute;
+    right: 40px; 
+
+}
+
+.categoriesbtn {
+    border: none;
+    background-color: rgb(247, 186, 34);
+    height: 100%;
+    font-size: 20px;
+
+}
