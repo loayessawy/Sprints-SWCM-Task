@@ -5,8 +5,3 @@ btnSelect.addEventListener("click", function(){
     listShow.style.display="flex";
     btnSelect.style.display="none";
 })
-
-
-
-
-
