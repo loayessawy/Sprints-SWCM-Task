@@ -205,23 +205,70 @@ body {
     padding: 15px;
 }
 
+/* --------------------Responsive-------------- */
+
+@media screen and (max-width: 990px) {
+ 
+  
+}
+
 /* -----------------Body----------------- */
 
 .topSectioncontainer {
     
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 2%;
-    
-
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .leftSecContainer {
-    width: 1080px;
-    height: 500px;
+    width: 900px;
+    height: 520px;
     background-color: blueviolet;
     background-image: url(./Images/Women_fashion.jpg);
     background-repeat: no-repeat;
     background-position: center ;
+}
+
+.alphapic{
+    width: 100%;
+    background-color: rgb(49, 48, 50, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.leftSecContainer .alphapic .leftSecionbtn{
+    color: rgb(252, 252, 252);
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    border: solid;
+    cursor: pointer;
+    font-size: 18px;
+}
+.rightTopSecionbtn{
+    background-color: rgb(247, 186, 34);
+    width: 110px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.rightBottomSecionbtn{
+    background-color: rgb(247, 186, 34);
+    width: 110px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 
 }
 .rightSecContainer{
@@ -234,13 +281,20 @@ body {
     background-color: blueviolet;
     background-repeat: no-repeat;
     background-position: center ;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
     
 }
 .rightSecBottom {
     width: 512px;
     height: 250px;
     background-image: url(./Images/Bottom_Sec.jpg);
-    
+    margin-top: 10px;
     background-color: rgb(43, 226, 171);
     background-repeat: no-repeat;
     background-position: center ;
@@ -265,6 +319,10 @@ body {
     font-weight: bold;
     cursor: pointer;
     border-radius: 10px;
+    gap: 20px;
+}
+.topSectioncontainer div {
+    
 }
 .btmStyle i{
     color: rgb(247, 186, 34);
