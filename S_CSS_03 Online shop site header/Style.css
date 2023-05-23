@@ -1,0 +1,452 @@
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(216, 215, 213, 0.821);
+}
+
+.topNavContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+}
+
+.topNavListContainer {
+    display: flex;
+    margin-right: 50px;
+    flex-direction: row-reverse;
+    padding: 10px;
+    gap: 20px;
+}
+
+.langDropListContent {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.langList:hover .langDropListContent {
+    display: block;
+    position: absolute;
+}
+
+.langDropListContent a {
+    display: block;
+    padding: 15px;
+}
+
+.currencyDropListContent {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.currencyList:hover .currencyDropListContent {
+    display: block;
+    position: absolute;
+}
+
+.currencyDropListContent a {
+    display: block;
+    padding: 15px;
+}
+
+.accDropListContent {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.accList:hover .accDropListContent {
+    display: block;
+    position: absolute;
+}
+
+.accDropListContent a {
+    display: block;
+    padding: 15px;
+
+}
+
+.topNavContainer .langListbtn {
+
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 5px;
+
+
+}
+
+.langList {
+    position: relative;
+}
+
+.topNavContainer .currencyListbtn {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.currencyList {
+    position: relative;
+}
+
+.topNavContainer .accListbtn {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.accList {
+    position: relative;
+}
+
+.topNavLinks {
+    margin-left: 50px;
+}
+
+.topNavLinks>a {
+    color: gray;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.topNavLinks>a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.logoContainer {
+
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.logoContainer>.imgContainer {
+    padding-left: 30px;
+}
+
+.searchContainer {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: rgb(189, 185, 185);
+    padding: 2px;
+}
+
+.searchContainer .searchBar {
+    width: 500px;
+    height: 25px;
+    border: none;
+}
+
+.searchContainer>button {
+    border: none;
+    margin-left: 2px;
+}
+
+.contact-container {
+    text-align: center;
+    margin-right: 3%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-container>label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.contact-container .phonecontainer {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.BtmnavContainer {
+
+    height: 64px;
+    padding-inline: 50px;
+    background-color: rgb(61, 70, 77);
+    display: flex;
+    align-items: center;
+}
+
+.emotions {
+    display: flex;
+    gap: 20px;
+}
+
+.emotions>i {
+    cursor: pointer;
+}
+
+.BtmnavContainer .categories {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(247, 186, 34);
+    position: relative;
+}
+
+.BtmnavContainer .categories .categoriesbtn .downarrow {
+    position: absolute;
+    right: 5%;
+}
+
+.y-color {
+    color: rgb(247, 186, 34);
+}
+
+.W-color {
+    color: white;
+}
+
+.middleLinks {
+    display: flex;
+    gap: 10px;
+    width: 30%;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.BtmnavContainer .middleLinks a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.categoriesbtn {
+    border: none;
+    background-color: rgb(247, 186, 34);
+    font-size: 20px;
+}
+
+.catgDropListContent {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.categories:hover .catgDropListContent {
+    display: block;
+    position: absolute;
+    transform: translate(0px, 100px);
+    width: 100;
+}
+
+.catgDropListContent a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.pageDropListContent {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    transform: translate(0px, 10px);
+}
+
+.pageDropList:hover .pageDropListContent {
+    display: block;
+    position: absolute;
+}
+
+.pageDropListContent a {
+    display: block;
+    padding: 15px;
+}
+
+/* --------------------Responsive-------------- */
+
+@media screen and (max-width: 990px) {}
+
+/* ------------Section One categories -------------- */
+.fullBodyContainer {
+
+    width: 90%;
+    margin: 2% auto;
+
+}
+
+.topSectioncontainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 400px;
+    width: 100%;
+    gap: 25px;
+
+}
+
+.leftSecContainer {
+    width: 65%;
+    height: 100%;
+    background-color: blueviolet;
+    background-image: url(./Images/Women_fashion.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.alphapic {
+    width: 100%;
+    background-color: rgb(49, 48, 50, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.leftSecContainer .alphapic .leftSecionbtn {
+    color: rgb(252, 252, 252);
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    border: solid;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.rightSecContainer {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    /* background-color: blue; */
+
+}
+
+.rightTopSecionbtn {
+    background-color: rgb(247, 186, 34);
+    width: 110px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.rightBottomSecionbtn {
+    background-color: rgb(247, 186, 34);
+    width: 110px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.rightSecTop {
+    background-image: url(./Images/top_Sec.jpg);
+    width: 100%;
+    height: 50%;
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.rightSecTop:hover . {
+    background-color: rgb(102, 96, 107);
+}
+
+.rightSecBottom {
+    width: 100%;
+    height: 50%;
+    background-image: url(./Images/Bottom_Sec.jpg);
+    background-color: rgb(43, 226, 171);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.bottomContainer {
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.btmStyle {
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.topSectioncontainer div {}
+
+.btmStyle i {
+    color: rgb(247, 186, 34);
+}
+
+/* ------------Section Two categories -------------- */
+
+.second-Category-Container {}
+
+.second-Category-Container h2 ::after {
+    border: 1px solid;
+
+}
+
+.second-Category-List-Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+
+.second-Category-List-Container .item {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+
+}
+
+.second-Category-List-Container .item .product-Text {
+    padding-left: 3%;
+}
+
+.second-Category-List-Container .item:hover {
+    background-color: rgb(247, 186, 34);
+    cursor: pointer;
+}
+
+.second-Category-List-Container .item .product-img-container {
+    overflow: hidden;
+}
+
+.second-Category-List-Container .item .product-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.second-Category-List-Container .item:hover .product-img-container img {
+    transform: scale(1.1) rotate(3deg);
+    transition-duration: 0.5s;
+}
