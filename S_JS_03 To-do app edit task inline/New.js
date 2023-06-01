@@ -78,6 +78,7 @@ function createNew(taskName) {
 
             taskList[currentIndex] = newTask;
             document.getElementById(`subBtn`).innerHTML = "Submit"
+            webStatus = "new";
 
         }
         displayProducts()
