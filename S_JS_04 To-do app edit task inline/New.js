@@ -6,6 +6,8 @@ let deleteBtn = document.getElementById('deleteBtn');
 let inputTaskVaild = document.getElementById('inputTaskVaild');
 let webStatus = "new";
 let currentIndex;
+let clickCounter="1";
+
 
 // let taskName=document.getElementById("taskName");
 console.log(taskName, priority, subBtn)
@@ -97,7 +99,23 @@ function clearInputs() {
 
 }
 const arrangePriority = () => {
-    taskList.sort((a, b) => a.priority - b.priority)
+    if (clickCounter ==="1") {
+        newTasktList = taskList.slice();
+        taskList.sort((a, b) => a.priority - b.priority) 
+        clickCounter ="2";
+    }
+    else if (clickCounter ==="2"){taskList.sort((a, b) => b.priority - a.priority)
+        document.getElementById('arrow-arrenge').style.display = 'none';
+        // document.getElementById('arrangeBtn').innerText = "Normal";
+        clickCounter ="3";
+    }
+    else if (clickCounter ==="3"){
+        document.getElementById('arrow-arrenge').style.display = 'inline';
+        // document.getElementById('arrangeBtn').textContent = "Arrenge";
+        taskList=newTasktList;
+        clickCounter ="1";
+    }
+
     displayProducts()
 }
 
