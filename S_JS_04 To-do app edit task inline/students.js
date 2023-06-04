@@ -1,4 +1,4 @@
-let tasksArray = [
+tasksArray = [
   ["Nathalie Nader Nabil", "Task 01", "Option 2"],
   ["Youssef Mohamed Ahmed Mohamed Youssef", "Task 01", "Option 1"],
   ["Salma Nasreldin", "Task 01", "Option 1"],
@@ -30,3 +30,8 @@ let tasksArray = [
 ];
 
 ///get Unique names from the array of array using
+
+let newArray = new Map(tasksArray)
+
+console.log(newArray.keys(), newArray.size)
+
