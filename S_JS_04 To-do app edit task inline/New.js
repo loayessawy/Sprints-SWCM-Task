@@ -105,13 +105,13 @@ const arrangePriority = () => {
     }
     else if (clickCounter ==="2"){taskList.sort((a, b) => b.priority - a.priority)
         document.getElementById('arrow-arrenge').style.display = 'none';
-        s
+        
         clickCounter ="3";
     }
     else if (clickCounter ==="3"){
         document.getElementById('arrow-arrenge').style.display = 'inline';
         // document.getElementById('arrangeBtn').textContent = "Arrenge";
-        taskList=newTasktList;
+        taskList = newTasktList;
         clickCounter ="1";
     }
     displayProducts()
