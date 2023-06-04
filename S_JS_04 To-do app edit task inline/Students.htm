@@ -1,4 +1,16 @@
-tasksArray = [
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TO Do App</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+    s
+    <script>
+      
+      tasksArray = [
   ["Nathalie Nader Nabil", "Task 01", "Option 2"],
   ["Youssef Mohamed Ahmed Mohamed Youssef", "Task 01", "Option 1"],
   ["Salma Nasreldin", "Task 01", "Option 1"],
@@ -31,18 +43,65 @@ tasksArray = [
 
 ///get Unique names from the array of array using
 
-// let newArray = new Map(tasksArray)
+let newArray = new Map(tasksArray)
 
-// console.log(newArray.keys(), newArray.size)
+console.log(newArray.keys(), newArray.size)
+let shoeCase = documen.getelemetbyid("show-table")
 
-const uniqueNameFromArray = (tasksArray) => {
-  let newTasks = tasksArray.map(task => {
-      return task[0];
-  });
-  let uniqueTask = new Set(newTasks);
-  uniqueTask.forEach(task => {
-      console.log(task)
-  });
+for (let i = 0; i < newArray.length; i++) {
+    const element = newArray[i];
+    <tr>
+        <td>
+          NAme 
+        <td>
+            Task
+        </td>
+        <td>
+            Option
+        </td>
+
+    </tr>
+    
 }
 
-uniqueNameFromArray(tasksArray);
+
+
+    </script>
+</head>
+
+<body>
+<table id="">
+    <tr>
+        <th>
+          NAme 
+        <th>
+            Task
+        </th>
+        <th>
+            Option
+        </th>
+
+    </tr>
+    <Tbody class="show-table">
+        <tr>
+        <td>
+          NAme 
+        <td>
+            Task
+        </td>
+        <td>
+            Option
+        </td>
+
+    </tr>
+
+    </Tbody>
+
+</table>
+</body>
+
+
+
+</body>
+
+</html>

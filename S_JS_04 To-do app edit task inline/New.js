@@ -90,14 +90,13 @@ function createNew(taskName) {
         taskList.push(newTask);
     }
     displayProducts()
-
 }
 
 function clearInputs() {
     taskName.value = '';
     priority.value = '';
-
 }
+
 const arrangePriority = () => {
     if (clickCounter ==="1") {
         newTasktList = taskList.slice();
@@ -106,7 +105,7 @@ const arrangePriority = () => {
     }
     else if (clickCounter ==="2"){taskList.sort((a, b) => b.priority - a.priority)
         document.getElementById('arrow-arrenge').style.display = 'none';
-        // document.getElementById('arrangeBtn').innerText = "Normal";
+        s
         clickCounter ="3";
     }
     else if (clickCounter ==="3"){
@@ -115,7 +114,6 @@ const arrangePriority = () => {
         taskList=newTasktList;
         clickCounter ="1";
     }
-
     displayProducts()
 }
 
@@ -131,7 +129,6 @@ const saveTask = (i) => {
     taskList[i].taskName = document.getElementById(`taskName-${i}`).value;
     taskList[i].priority = document.getElementById(`priority-${i}`).value;
     taskList[i].status = 'new';
-
     displayProducts()
 }
 
@@ -144,7 +141,7 @@ const saveAllEdits = (i) => {
             document.getElementById("saveAllBtn").style.display = "none"
             taskList[i].status = 'new';
         }
-
     }
     displayProducts()
 }
+
