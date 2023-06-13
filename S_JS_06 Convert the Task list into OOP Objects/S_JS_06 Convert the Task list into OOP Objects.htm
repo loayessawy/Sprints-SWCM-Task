@@ -28,18 +28,20 @@
           <div class="col-12 d-flex">
             <input type="number" placeholder="Task priority number" id="priority" class=" form-control mx-3 ">
             <button id="subBtn" class="btn btn-info ">Submit</button>
-
-
           </div>
         </div>
 
       </div>
       <div class="col-12 mt-5 ">
-
+        <button onclick="deleteAllTasks()" class="btn btn-danger" id="deletAllbrn">Delete All </button>
 
         <table class="table">
           <thead>
             <tr>
+              <th>
+                <input onclick="selectAllTasks()" type="checkbox" id="mainCheckTask" class="col" name="checkTask"
+                  value="yes" />
+              </th>
               <th scope="col" class="text-center">ID</th>
               <th scope="col" class="text-center">Task name</th>
               <th scope="col" class="text-center">Priority <button onclick="arrangePriority()" class="btn bg-success "
@@ -47,6 +49,7 @@
               <th scope="col" class="text-center">Status</th>
               <th scope="col" class="text-center">Delete</th>
               <th scope="col" class="text-center"> Update</th>
+
             </tr>
           </thead>
           <tbody id="tableContainer">
@@ -62,7 +65,6 @@
 
 </body>
 <script src="New.js"></script>
-<script src="./students.js"></script>
 </body>
 
 </html>

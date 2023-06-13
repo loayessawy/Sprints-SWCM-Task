@@ -4,6 +4,7 @@ let subBtn = document.getElementById('subBtn');
 let tableContainer = document.getElementById('tableContainer');
 let deleteBtn = document.getElementById('deleteBtn');
 let inputTaskVaild = document.getElementById('inputTaskVaild');
+let mainCheckBox = document.getElementById("mainCheckTask")
 let webStatus = "new";
 let currentIndex;
 let clickCounter = "1";
@@ -14,23 +15,22 @@ class Task {
     constructor(name, priority) {
         this.taskName = name;
         this.priority = priority;
-        this.status = "new";  
+        this.status = "new";
     }
-    validate()
-    {
+    validate() {
         if (this.taskName == "") {
-            return  'Enter the task Name';
+            return 'Enter the task Name';
         }
         else if (this.priority == "") {
             return 'Please enter periorty value';
 
         }
-        else if (this.priority< 0) {
-            return  'periorty must be greater than 0';
+        else if (this.priority < 0) {
+            return 'periorty must be greater than 0';
         }
-       else {
-        return"";
-       }     
+        else {
+            return "";
+        }
     }
     updateName(name) {
         this.taskName = name;
@@ -38,21 +38,50 @@ class Task {
     updatePriorty() {
         this.priority = priority;
     }
-    activateUpdateStatus() {
-        this.fstatus = "update";
+
+}
+function activateUpdateStatus(i) {
+    console.log("hi", document.getElementById(`taskStatus-${i}`))
+    let x = document.getElementById(`taskStatus-${i}`);
+    if (x !== "Done") {
+      x.innerText = "Done";
+    } else{
+        x.innerText = "new";
     }
+    // this.status = "Done";
+    // document.getElementById(`taskStatus-${i}`).innerText = "Done"
 }
 // let taskName=document.getElementById("taskName");
 console.log(taskName, priority, subBtn)
+
+selectAllTasks = () => {
+    mainCheckBox = document.querySelectorAll("input[type='checkbox']")
+    mainCheckBox.forEach(box => {
+        if (box.id == "mainCheckTask") return;
+        box.checked = !box.checked;
+        console.log("djsa")
+    });
+
+
+}
+deleteAllTasks = () => {
+
+
+    taskList = [];
+    displayProducts()
+
+
+}
 
 const displayRow = (i) => {
     if (taskList[i].status === "new") {
         return `
 <tr id="row-${i}">
+<td><input type="checkbox" id="checkTask-${i}" class="col" name="checkTask" ></td>
 <th class="text-center">${i + 1}</th>
 <td class="text-center">${taskList[i].taskName}</td>
 <td class="text-center">${taskList[i].priority}</td>
-<td class="text-center">${taskList[i].status}</td>
+<td class="text-center" id="taskStatus-${i}" onclick="activateUpdateStatus(${i})">${taskList[i].status}</td>
 <td class="text-center"><button onclick="deleteItem(${i})" id="deleteBtn"class="btn btn-danger">Delete</button></td>
 <td class="text-center"><button onclick="updateTask(${i})" id="updateBtn"class="btn btn-warning">Update</button></td>
 </tr>
@@ -65,13 +94,13 @@ const displayRow = (i) => {
 <th class="text-center">${i + 1}</th>
 <td class="text-center"><input type="text" placeholder="Enter your task name" value="${taskList[i].tmpData?.name ?? taskList[i].taskName}" id="taskName-${i}" class=" form-control mx-3 "></td>
 <td class="text-center"><input type="number" placeholder="priority" value="${taskList[i].tmpData?.priority ?? taskList[i].priority}" id="priority-${i}" class=" form-control mx-3 "></td>
-<td class="text-center">${taskList[i].status}</td>
+<td class="text-center" id="taskStatus-${i}" onclick="activateUpdateStatus(${i})">${taskList[i].status}</td>
 <td class="text-center"><button onclick="deleteItem(${i})" id="deleteBtn"class="btn btn-danger">Delete</button></td>
 <td class="text-center"><button onclick="saveTask(${i})" id="saveBtn"class="btn btn-warning">Save</button></td>
 </tr>
 `;
     }
-} 
+}
 
 const displayProducts = () => {
     let insertTable = '';
@@ -83,9 +112,11 @@ const displayProducts = () => {
             }
         }
         insertTable += displayRow(i);
+
         taskList[i].tmpData = null;
     }
     tableContainer.innerHTML = insertTable;
+
 }
 displayProducts()
 
@@ -101,12 +132,12 @@ const deleteItem = (i) => {
 }
 
 function createNew(taskName) {
-    
-    let task1 = new Task (taskName.value, priority.value);   
-        inputTaskVaild.innerHTML = task1.validate();
-        if (inputTaskVaild.innerHTML === "") {
-            taskList.push(task1);
-        }
+
+    let task1 = new Task(taskName.value, priority.value);
+    inputTaskVaild.innerHTML = task1.validate();
+    if (inputTaskVaild.innerHTML === "") {
+        taskList.push(task1);
+    }
 
     displayProducts()
 }
@@ -139,10 +170,10 @@ const arrangePriority = () => {
 
 const updateTask = (i) => {
     taskList[i].status = 'update';
-    // document.getElementById("saveAllBtn").style.display = "block"
+
     currentIndex = i;
     document.getElementById(`row-${i}`).outerHTML = displayRow(i);
-    //displayProducts()
+
 }
 
 const saveTask = (i) => {
