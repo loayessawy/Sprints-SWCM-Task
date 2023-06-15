@@ -28,12 +28,12 @@ function priceChange(products, exchangeRate) {
 }
 
 function recategorize(products) {
-    const categorizedProducts = {};
+    const productsList = {};
 
     products.forEach((product) => {
         const { category } = product;
-        if (!categorizedProducts[category.name]) {
-            categorizedProducts[category.name] = {
+        if (!productsList[category.name]) {
+            productsList[category.name] = {
                 category: {
                     id: category.id,
                     name: category.name,
@@ -41,20 +41,20 @@ function recategorize(products) {
                 products: [],
             };
         }
-        categorizedProducts[category.name].products.push(product);
+        productsList[category.name].products.push(product);
     });
 
-    return Object.values(categorizedProducts);
+    return Object.values(productsList);
 }
 
 async function displayData() {
     try {
         const products = await getData();
-        const categorizedProducts = recategorize(products);
+        const productsList = recategorize(products);
         const exchangeRate = await currencyRate();
         priceChange(products, exchangeRate);
 
-        categorizedProducts.forEach((category) => {
+        productsList.forEach((category) => {
             console.log('Category:', category.category);
             console.log('Products:', category.products);
         });
